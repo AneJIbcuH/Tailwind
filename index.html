@@ -5,43 +5,83 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+        'a': '1098px',
+        },
+        extend: {
+          colors: {
+           
+          },
+         spacing: {
+        'w': '250px',
+      }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .div {
+       background-color: white;
+       display: flex;
+       justify-content: space-around;
+       width: 1088px;
+       height: 54px;
+       border: solid #E8E8E8 1px;
+       border-radius: 4px;
+       font-size: 14px;
+      }
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .inp {
+        border: solid #E8E8E8 2px;
+        border-radius: 4px;
+        height: 40px;
+      }
+    }
+  </style>
   <title>Document</title>
 </head>
 <body class='bg-[#E8E8E8]'>
 
-<div class='min-[1366px]:w-[1366px] min-[1366px]:h-[768px] border-2 border-[#B5B2B2] mx-auto flex flex-col max-[1098px]:w-[320px] justify-center items-center font-['Roboto']'> 
+<div class='min-[1366px]:w-[1366px] min-[1366px]:h-[768px] border-2 border-[#B5B2B2] mx-auto flex flex-col max-a:w-[320px] justify-center items-center font-['Roboto']'> 
 
-    <div class='min-[1098px]:flex min-[1098px]:justify-between min-[1098px]:w-[1088px] max-[1098px]:w-[234px] max-[1098px]:mr-9'>
+    <div class='min-[1098px]:flex min-[1098px]:justify-between min-[1098px]:w-[1088px] max-a:w-[234px] max-a:mr-9'>
         <p class='text-[28px] font-bold'>Все счета</p>
-        <button class='w-[144px] h-[38px] bg-[#7840B0] rounded text-white text-[15px] max-[1098px]:my-2'>Выставить счет</button>
+        <button class='w-[144px] h-[38px] bg-[#7840B0] rounded text-white text-[15px] max-a:my-2'>Выставить счет</button>
     </div>
 
-    <div class='flex max-[1098px]:flex-col max-[1098px]:justify-around min-[1098px]:justify-start min-[1098px]:items-center w-[1088px] h-[49px] bg-white border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[123px]'>
+    <div class='flex max-a:flex-col max-a:justify-around min-[1098px]:justify-start min-[1098px]:items-center w-[1088px] h-[49px] bg-white border border-[#E8E8E8] rounded max-a:w-[274px] max-a:h-[123px]'>
         <p class='mx-4'>Выставленные</p>
         <p class='mx-4'>К оплате</p>
-        <p class='mx-4 border-b-2 border-purple-600 min-[1098px]:h-[49px] min-[1098px]:pt-[13px] max-[1098px]:w-[62px] max-[1098px]:pb-3'>История</p>
+        <p class='mx-4 border-b-2 border-purple-600 min-[1098px]:h-[49px] min-[1098px]:pt-[13px] max-a:w-[62px] max-a:pb-3'>История</p>
     </div>
     
-    <div class='border border-[#E8E8E8] rounded '>        
-        <div class='bg-white flex items-center justify-around min-[1098px]:w-[1086px] min-[1098px]:h-[72px] max-[1098px]:w-[272px] max-[1098px]:h-[223px] max-[1098px]:flex-col'>
-            <select class='min-[1098px]:w-[260px] max-[1098px]:w-[250px] h-[40px] rounded border-2 border-[#E8E8E8]'><option>Все торговые точки и операции</option></select>
-            <p class='min-[1098px]:w-[436px] max-[1098px]:w-[250px] h-[40px] rounded border-2 border-[#E8E8E8] text-[#E8E8E8] flex items-center pl-1'>Поиск по номеру счета</p>
-            <select class='min-[1098px]:w-[168px] max-[1098px]:w-[250px] h-[40px] rounded border-2 border-[#E8E8E8] bg-neutral-300'><option>Фильтры</option></select>
-            <select class='min-[1098px]:w-[168px] max-[1098px]:w-[250px] h-[40px] rounded border-2 border-[#E8E8E8] bg-[#E8E8E8]'><option>Действия</option></select>
+    <div class='border border-[#E8E8E8] rounded'>        
+        <div class='bg-white flex items-center justify-around min-[1098px]:w-[1086px] min-[1098px]:h-[72px] max-a:w-[272px] max-a:h-[223px] max-a:flex-col max-a:text-[14px]'>
+            <select class='min-[1098px]:w-[269px] max-a:w-w inp bg-white px-1'><option>Все торговые точки и операции</option></select>
+            <p class='min-[1098px]:w-[436px] max-a:w-w inp text-[#E8E8E8] flex items-center px-1'>Поиск по номеру счета</p>
+            <select class='min-[1098px]:w-[168px] max-a:w-w inp bg-neutral-300 px-1'><option>Фильтры</option></select>
+            <select class='min-[1098px]:w-[168px] max-a:w-w bg-[#E8E8E8] px-1 inp'><option>Действия</option></select>
         </div> 
 
-        <div class='bg-white flex items-center justify-around w-[1086px] h-[42px] text-[12px] font-medium max-[1098px]:hidden'>
+        <div class='bg-white flex items-center justify-around w-[1086px] h-[42px] text-[12px] font-medium max-a:hidden'>
             <input type="checkbox" class='w-4 h-4'>
             <p class='w-[73px]'>Номер счета</p>
-            <select class='w-[130px]'><option>Время и дата</option></select>
+            <select class='w-[130px] bg-white'><option>Время и дата</option></select>
             <p class='w-[170px]'>Торговая точка / Операция</p>
-            <select class='w-[67px]'><option>Сумма</option></select>
+            <select class='w-[67px] bg-white'><option>Сумма</option></select>
             <p class='w-[60px]'>Получено</p>
-            <select class='w-[222px]'><option>Статус</option></select>
+            <select class='w-[222px] bg-white'><option>Статус</option></select>
         </div>
     </div>
       
-    <div class='bg-white flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[263px] max-[1098px]:flex-col max-[1098px]:pl-3'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
         <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>№32467</p>
@@ -52,15 +92,15 @@
         <p class='min-[1098px]:hidden font-medium'>Сумма</p>   
         <div class='w-[67px] flex flex-col min-[1098px]:items-end'>
             <p class='h-[18px]'>1500 тг</p>
-            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-[1098px]:hidden'>−150 тг</p>
+            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-a:hidden'>−150 тг</p>
         </div>
         <p class='min-[1098px]:hidden font-medium'>Получено</p>
         <p class='w-[60px] font-medium'>1350 тг</p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
     </div>
       
-    <div class='bg-white flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[220px] max-[1098px]:flex-col max-[1098px]:pl-3'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
         <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>№32466</p>
@@ -72,11 +112,11 @@
         <p class='w-[67px] h-[18px] min-[1098px]:text-end'>3 850 тг</p>
         <p class='w-[60px] font-medium'></p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[82px] h-[22px] bg-red-100 text-xs text-red-500 rounded-full font-medium'>Отклонено</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[82px] h-[22px] bg-red-100 text-xs text-red-500 rounded-full font-medium'>Отклонено</button></div>      
     </div>
       
-    <div class='bg-white flex flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[220px] max-[1098px]:flex-col max-[1098px]:pl-3'>
-        <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
+        <input type="checkbox" class='w-4 h-4 max-a:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>Вывод</p>
         <p class='min-[1098px]:hidden font-medium'>Время и дата</p>
@@ -87,11 +127,11 @@
         <p class='w-[67px] h-[18px] min-[1098px]:text-end'>−16 335 тг</p>
         <p class='w-[60px] font-medium'></p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[107px] h-[22px] bg-purple-100 text-xs text-purple-500 rounded-full font-medium'>Вывод средств</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[107px] h-[22px] bg-purple-100 text-xs text-purple-500 rounded-full font-medium'>Вывод средств</button></div>      
     </div>
       
-    <div class='bg-white flex flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[220px] max-[1098px]:flex-col max-[1098px]:pl-3'>
-        <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
+        <input type="checkbox" class='w-4 h-4 max-a:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>№32467</p>
         <p class='min-[1098px]:hidden font-medium'>Время и дата</p>
@@ -102,11 +142,11 @@
         <p class='w-[67px] h-[18px] min-[1098px]:text-end'>1000 тг</p>
         <p class='w-[60px] font-medium'></p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[82px] h-[22px] bg-red-100 text-xs text-red-500 rounded-full font-medium'>Отклонено</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[82px] h-[22px] bg-red-100 text-xs text-red-500 rounded-full font-medium'>Отклонено</button></div>      
     </div>
       
-    <div class='bg-white flex flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[263px] max-[1098px]:flex-col max-[1098px]:pl-3'>
-        <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
+        <input type="checkbox" class='w-4 h-4 max-a:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>№32467</p>
         <p class='min-[1098px]:hidden font-medium'>Время и дата</p>
@@ -116,16 +156,16 @@
         <p class='min-[1098px]:hidden font-medium'>Сумма</p>           
         <div class='w-[67px] flex flex-col min-[1098px]:items-end'>
             <p class='h-[18px]'>1500 тг</p>
-            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-[1098px]:hidden'>−150 тг</p>
+            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-a:hidden'>−150 тг</p>
         </div>
         <p class='min-[1098px]:hidden font-medium'>Получено</p>
         <p class='w-[60px] font-medium'>1350 тг</p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
     </div>
       
-    <div class='bg-white flex flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[220px] max-[1098px]:flex-col max-[1098px]:pl-3'>
-        <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
+        <input type="checkbox" class='w-4 h-4 max-a:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>Комиссия</p>
         <p class='min-[1098px]:hidden font-medium'>Время и дата</p>
@@ -136,11 +176,11 @@
         <p class='w-[67px] h-[18px] min-[1098px]:text-end text-red-500'>-168 тг</p>
         <p class='w-[60px] font-medium'></p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[77px] h-[22px] bg-red-100 text-xs text-red-500 rounded-full font-medium'>Комиссия</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[77px] h-[22px] bg-red-100 text-xs text-red-500 rounded-full font-medium'>Комиссия</button></div>      
     </div>
       
-    <div class='bg-white flex flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[263px] max-[1098px]:flex-col max-[1098px]:pl-3'>
-        <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
+        <input type="checkbox" class='w-4 h-4 max-a:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>№32467</p>
         <p class='min-[1098px]:hidden font-medium'>Время и дата</p>
@@ -150,16 +190,16 @@
         <p class='min-[1098px]:hidden font-medium'>Сумма</p>       
         <div class='w-[65px] flex flex-col min-[1098px]:items-end'>   
             <p class='h-[18px]'>1500 тг</p>
-            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-[1098px]:hidden'>−150 тг</p>
+            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-a:hidden'>−150 тг</p>
         </div>
         <p class='min-[1098px]:hidden font-medium'>Получено</p>
         <p class='w-[60px] font-medium'>1350 тг</p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
     </div>
       
-    <div class='bg-white flex flex min-[1098px]:items-center justify-around w-[1088px] h-[54px] text-[14px] border border-[#E8E8E8] rounded max-[1098px]:w-[274px] max-[1098px]:h-[263px] max-[1098px]:flex-col max-[1098px]:pl-3 max-[1098px]:mb-3'>
-        <input type="checkbox" class='w-4 h-4 max-[1098px]:hidden'>
+    <div class='div min-[1098px]:items-center max-a:w-[274px] max-a:h-[263px] max-a:flex-col max-a:pl-3'>
+        <input type="checkbox" class='w-4 h-4 max-a:hidden'>
         <p class='min-[1098px]:hidden font-medium'>Номер счета</p>
         <p class='w-[73px]'>№32467</p>
         <p class='min-[1098px]:hidden font-medium'>Время и дата</p>
@@ -169,12 +209,12 @@
         <p class='min-[1098px]:hidden font-medium'>Сумма</p>          
         <div class='w-[65px] flex flex-col min-[1098px]:items-end'>
             <p class='h-[18px]'>9 980 тг</p>
-            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-[1098px]:hidden'>−998 тг</p>
+            <p class='text-[11px] text-[#B5B2B2] h-[14px] max-a:hidden'>−998 тг</p>
         </div>
         <p class='min-[1098px]:hidden font-medium'>Получено</p>
         <p class='w-[60px] font-medium'>8 982‬ тг</p>
         <p class='min-[1098px]:hidden font-medium'>Статус</p>
-        <div class='w-[222px] max-[1098px]:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
+        <div class='w-[222px] max-a:pb-1'><button class='w-[76px] h-[22px] bg-[#D7EBD3] text-xs text-green-500 rounded-full font-medium'>Оплачено</button></div>      
     </div>   
 </div>
 </body>
